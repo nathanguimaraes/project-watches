@@ -147,6 +147,17 @@ button{
     text-align: center;
 }
 
+.section__title::before{
+    content:'';
+    position: absolute;
+    top:-1rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 67px;
+    height: 1px;
+    background-color: var(--first-color);
+}
 
 /*=======================HEADER & NAV ===================*/
 .header{
@@ -245,6 +256,10 @@ button{
 
 
 /* CHANGE BACGROUND HEADER */
+.scroll-header{
+    background-color: var(--body-color);
+    box-shadow: 0 1px 4px hsla(0, 4%, 15%, .1);
+}
 
 
 
@@ -307,15 +322,84 @@ button{
     margin-bottom: var(--mb-3);
 }
 
+.home__btns{
+    display: flex;
+    align-items: center;
+}
+
+.home__button{
+    box-shadow: 0 12px 24px hsla(0, 0%, 10%, .2);
+}
+
 
 
 /*==================== BUTTONS ===============*/
 
 
-.button{    
-    
+.button{
+    display: inline-block;
+    background-color: var(--button-color);
+    color: #fff;
+    padding: 1.25rem 2rem;
+    font-weight: var(--font-medium);
+    transition: .3s;
 }
+
+.button:hover{
+    background-color: var(--button-color-alt);
+}
+
+.button--gray{
+    background-color: hsl(0, 0%, 75%);
+    color: var(--text-color);
+}
+
+.button--gray:hover{
+    background-color: hsl(0, 0%, 63%);
+}
+
+.button--small{
+    padding: 1rem 1.5rem;
+}
+
 /*==================== FEATURE ===============*/
+.featured__container{
+    row-gap: 2.5rem;
+}
+
+.featured__card{
+    position:relative;
+    text-align: center;
+    background-color: var(--container-color);
+    padding-top: 2rem;
+    border: 1px solid var(--border-color);
+    overflow-y: hidden;
+    transition: .3s;
+}
+
+.featured__tag{
+    background-color: var(--first-color);
+    padding: .5rem 1rem;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: var(--small-font-size);
+    font-weight: var(--font-medium);
+    position: absolute;
+    transform: rotate(-90deg);
+    left: -1rem;
+    top: 3rem;
+}
+
+.featured__img{
+    height: 214px;
+    margin-bottom: var(--mb-1);   
+}
+
+.featured__title,
+.featured__price{
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-bold);
+}
 
 /*==================== STORY ===============*/
 
