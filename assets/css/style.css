@@ -65,7 +65,7 @@
 *{
     box-sizing: border-box;
     padding:0;
-    margin: 0;
+    margin: 5px;
 }
 
 html{
@@ -401,11 +401,228 @@ button{
     font-weight: var(--font-bold);
 }
 
+.featured__title{
+    text-transform: uppercase;
+    margin-bottom: var(--mb-0-75);
+}
+
+.featured__price{
+    display: block;
+    color: var(--first-color);
+    transition: 3s;
+}
+
+.featured__button{
+    font-size: var(--small-font-size);
+    transform: translateY(1rem);
+    opacity: 0;
+}
+
+.featured__card:hover{
+    box-shadow: 0 12px 32px hsla(0, 0%, 20%, .1);
+    padding: 2rem 0 3rem 0;
+}
+
+.featured__card:hover .featured__button{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.featured__card:hover .featured__price{
+    margin-bottom: var(--mb-1-5);
+}
+
 /*==================== STORY ===============*/
+.story__container{
+    row-gap: 7.5rem;
+}
+
+.story__title{
+    font-size: var(--h1-font-size);
+    margin-bottom: var(--mb-1);
+}
+
+.story__description{
+    margin-bottom: var(--mb-2-5);
+}
+
+.story__images{
+    position: relative;
+}
+
+.story__img,
+.story__square{
+    width: 250px;
+}
+.story__img,
+.story__square{
+    height: 250px;
+    background-color: var(--first-color);
+}
+
+.story__img{
+    position: absolute;
+    left: 3rem;
+    top: -3rem;
+}
 
 /*==================== PRODUCTS ===============*/
 
+.products__container{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.products__card{
+    position: relative;
+    background-color: var(--container-color);
+    padding: 1.25rem 0;
+    border: 1px solid var(--border-color);
+    text-align: center;
+    transition: .3s;
+}
+
+.products__img{
+    height: 125px;
+    margin-bottom: var(--mb-1);
+}
+
+.products__title,
+.products__price{
+    font-size: var(--small-font-size);
+    font-weight: var(--font-medium);
+}
+
+.products__title{
+    text-transform: uppercase;
+    margin-bottom: var(--mb-0-5);
+}
+
+.products__price{
+    color: var(--first-color);
+}
+
+.products__botton{
+    background-color: var(--button-color);
+    padding: .4rem;
+    color: #fff;
+    font-size: 1rem;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transition: .3s;
+}
+
+.products__button:hover{
+    background-color: var(--button-color-alt);
+}
+
+.products__card:hover{
+    box-shadow: 0 8px 32px hsla(0, 0%, 10%, .1);
+}
+
+
 /*==================== TESTIMONIAL ===============*/
+.testimonial__container{
+    row-gap:4rem;
+}
+
+.testimonial__quote{
+    display: inline-flex;
+    background-color: var(--container-color);
+    padding: .5rem .75rem;
+    font-size: 1.5rem;
+    color: var(--first-color);
+    box-shadow: 0 4px 12px hsla(0, 0%, 20%, .1);
+    margin-bottom: var(--mb-2);
+}
+
+.testimonial__description{
+    margin-bottom: var(--mb-1);
+}
+
+.testimonial__date{
+    font-size: var(--normal-font-size);
+    margin-bottom: var(--mb-2);
+}
+
+.testimonial__perfil{
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+    margin-bottom: 7rem;
+}
+
+.testimonial__perfil-img{
+    width: 60px;
+    height: 60px;
+    border-radius: 3rem;
+}
+
+.testimonial__perfil-data{
+    display: flex;
+    flex-direction: column;
+    row-gap: .5rem;
+}
+
+.testimonial__perfil-name{
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-medium);
+    color: var(--title-color);
+}
+
+.testimonial__perfil-detail{
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-medium);
+    color: var(--title-color);
+}
+
+.testimonial__images{
+    position: relative;
+}
+
+.testimonial__img,
+.testimonial__square{
+    width: 250px;
+}
+
+.testimonial__square{
+    height: 250px;
+    background-color: var(--first-color);
+    margin-left: auto;
+}
+
+.testimonial__img{
+    position: absolute;
+    right: 2rem;
+    top: 3rem;
+}
 
 /*swiper class*/
+.testimonial-swiper{
+    margin-left: initial;
+    margin-right: initial;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after{
+    content:'';
+}
+
+.swiper-button-next,
+.swiper-button-prev{
+    top: initial;
+    bottom: 5%;
+    width: initial;
+    background-color: var(--container-color);
+    box-shadow: 0 4px 12px hsla(0, 0%, 20%, .1);
+    padding: .25rem;
+    font-size: 1.5rem;
+    color: var(--first-color);
+}
+
+.swiper-button-next{
+    right: initial;
+    left: 4rem;
+}
 /*ACTIVE LINK*/
